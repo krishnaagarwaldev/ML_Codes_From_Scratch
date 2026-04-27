@@ -17,7 +17,7 @@ unique_labels, y = np.unique(labels, return_inverse = True)
 X_min = X.min(axis=0)
 X_max = X.max(axis=0)
   
-X = (X - X_min)/(X_max - X_min)
+X = (X - X_min)/(X_max - X_min + 1e-8) # add small value to avoid division by zero
 
 np.random.seed(42)
 indices = np.random.permutation(n)

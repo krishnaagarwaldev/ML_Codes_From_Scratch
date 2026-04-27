@@ -74,7 +74,7 @@ X_bias = np.c_[np.ones(n), X_norm]
 
 # 🔹 Sigmoid
 def sigmoid(z):
-    z = np.clip(z, -500, 500)
+    # z = np.clip(z, -500, 500)
     return 1 / (1 + np.exp(-z))
 
 # 🔹 Gradient Descent

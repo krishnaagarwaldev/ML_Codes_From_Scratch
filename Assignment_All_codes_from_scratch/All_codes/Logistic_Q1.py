@@ -66,8 +66,8 @@ for _ in range(epochs):
     error = y_hat - labels
 
     # gradients
-    d_theta0 = np.sum(error) / N
-    d_theta1 = np.sum(error * scores) / N
+    d_theta0 = np.sum(error) / N   # N = len(scores)
+    d_theta1 = np.sum(error * scores) / N  # or np.mean(error * scores)
 
     # update
     theta0 -= alpha * d_theta0
